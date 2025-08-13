@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Content & Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        header, section, footer {
+            background: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        table, th, td {
+            border: 1px solid #999;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        fieldset {
+            border: 2px solid #ccc;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 6px;
+            margin-top: 4px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"], input[type="reset"] {
+            width: auto;
+            background: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 15px;
+        }
+        input[type="reset"] {
+            background: #dc3545;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>HTML5 Content Showcase & Form</h1>
+        <p>This page demonstrates <strong>lists</strong>, <strong>tables</strong>, and <strong>media</strong>, followed by an HTML5 form with built-in validation.</p>
+    </header>
+
+    <section>
+        <h2>My Favorite Programming Languages</h2>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Course Schedule</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Topic</th>
+                    <th>Duration</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>HTML5 Basics</td>
+                    <td>2 hours</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>CSS Styling</td>
+                    <td>2 hours</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>JavaScript Essentials</td>
+                    <td>3 hours</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Sample Media</h2>
+        <figure>
+            <img src="https://via.placeholder.com/600x200" alt="Sample Image" style="width:100%; border-radius: 6px;">
+            <figcaption>A sample image embedded with HTML5.</figcaption>
+        </figure>
+        <audio controls>
+            <source src="sample-audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <video controls width="100%">
+            <source src="sample-video.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+    </section>
+
+    <section>
+        <h2>Registration Form</h2>
+        <form action="#" method="post">
+            
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="John Doe" required minlength="3">
+                
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="+254712345678" pattern="^\+?\d{10,15}$" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Account Details</legend>
+                
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required minlength="4" maxlength="15" autocomplete="username">
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required minlength="6" autocomplete="new-password">
+                
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferences</legend>
+                
+                <label for="course">Preferred Course:</label>
+                <select id="course" name="course" required>
+                    <option value="">--Select--</option>
+                    <option value="html5">HTML5</option>
+                    <option value="css3">CSS3</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                </select>
+                
+                <label>Subscription Type:</label>
+                <input type="radio" id="free" name="subscription" value="free" required>
+                <label for="free">Free</label>
+                
+                <input type="radio" id="premium" name="subscription" value="premium">
+                <label for="premium">Premium</label>
+                
+                <label for="bio">Short Bio:</label>
+                <textarea id="bio" name="bio" rows="4" placeholder="Tell us a bit about yourself..."></textarea>
+            </fieldset>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 HTML5 Showcase. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
